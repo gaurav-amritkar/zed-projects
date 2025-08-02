@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Organizer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>📝 Note Organizer</h1>
+            <div class="header-controls">
+                <input type="text" id="searchInput" placeholder="Search notes..." class="search-input">
+                <button id="addNoteBtn" class="add-btn">+ New Note</button>
+            </div>
+        </header>
+
+        <main class="main">
+            <aside class="sidebar">
+                <div class="categories">
+                    <h3>Categories</h3>
+                    <div class="category-list">
+                        <button class="category-item active" data-category="all">All Notes</button>
+                        <button class="category-item" data-category="personal">Personal</button>
+                        <button class="category-item" data-category="work">Work</button>
+                        <button class="category-item" data-category="ideas">Ideas</button>
+                        <button class="category-item" data-category="todo">To-Do</button>
+                    </div>
+                </div>
+
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="totalNotes">0</span>
+                        <span class="stat-label">Total Notes</span>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="content">
+                <div class="notes-grid" id="notesGrid">
+                    <!-- Notes will be dynamically inserted here -->
+                </div>
+
+                <div class="empty-state" id="emptyState">
+                    <div class="empty-icon">📝</div>
+                    <h3>No notes yet</h3>
+                    <p>Create your first note to get started organizing your thoughts!</p>
+                    <button class="empty-add-btn" onclick="openNoteModal()">Create Note</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Note Modal -->
+    <div class="modal" id="noteModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">New Note</h2>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="noteTitle" placeholder="Note title..." class="note-title-input">
+                <select id="noteCategory" class="note-category-select">
+                    <option value="personal">Personal</option>
+                    <option value="work">Work</option>
+                    <option value="ideas">Ideas</option>
+                    <option value="todo">To-Do</option>
+                </select>
+                <textarea id="noteContent" placeholder="Write your note here..." class="note-content-input"></textarea>
+                <div class="note-tags">
+                    <input type="text" id="noteTagsInput" placeholder="Add tags (comma separated)..." class="tags-input">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="cancelBtn" class="cancel-btn">Cancel</button>
+                <button id="saveNoteBtn" class="save-btn">Save Note</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div class="modal" id="deleteModal">
+        <div class="modal-content small">
+            <div class="modal-header">
+                <h3>Delete Note</h3>
+                <button class="close-btn" id="closeDeleteModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete this note? This action cannot be undone.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="cancelDeleteBtn" class="cancel-btn">Cancel</button>
+                <button id="confirmDeleteBtn" class="delete-btn">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
