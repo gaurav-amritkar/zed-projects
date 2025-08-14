@@ -1,0 +1,134 @@
+# FastAPI and web framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+
+# Database
+sqlalchemy==2.0.23
+alembic==1.12.1
+psycopg2-binary==2.9.9
+redis==5.0.1
+
+# Async and task processing
+celery==5.3.4
+aiohttp==3.9.1
+asyncio-mqtt==0.16.1
+
+# Configuration and settings
+pydantic==2.5.1
+pydantic-settings==2.1.0
+python-dotenv==1.0.0
+
+# Web scraping and RSS
+requests==2.31.0
+beautifulsoup4==4.12.2
+feedparser==6.0.10
+scrapy==2.11.0
+urllib3==2.1.0
+lxml==4.9.3
+html5lib==1.1
+
+# AI and NLP
+openai==1.3.7
+transformers==4.36.2
+torch==2.1.2
+sentencepiece==0.1.99
+accelerate==0.25.0
+datasets==2.15.0
+
+# Translation services
+googletrans==4.0.0rc1
+azure-cognitiveservices-language-translator==1.0.0b1
+
+# Date and time processing
+python-dateutil==2.8.2
+pytz==2023.3
+
+# Caching
+redis-py==5.0.1
+hiredis==2.2.3
+
+# Monitoring and logging
+prometheus-client==0.19.0
+structlog==23.2.0
+sentry-sdk[fastapi]==1.38.0
+
+# Security and authentication
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.6
+
+# HTTP client
+httpx==0.25.2
+
+# Data processing and utilities
+pandas==2.1.4
+numpy==1.26.2
+python-slugify==8.0.1
+validators==0.22.0
+
+# Text processing
+nltk==3.8.1
+spacy==3.7.2
+textstat==0.7.3
+
+# Image processing (for article images)
+Pillow==10.1.0
+
+# Email
+emails==0.6
+
+# Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+httpx==0.25.2
+factory-boy==3.3.0
+
+# Development tools
+black==23.11.0
+isort==5.12.0
+flake8==6.1.0
+mypy==1.7.1
+
+# Deployment and containers
+gunicorn==21.2.0
+supervisor==4.2.5
+
+# File handling
+aiofiles==23.2.1
+python-magic==0.4.27
+
+# API documentation
+python-markdown==3.5.1
+
+# RSS and feed utilities
+python-feedgen==0.9.0
+defusedxml==0.7.1
+
+# Rate limiting
+slowapi==0.1.9
+
+# Background tasks
+rq==1.15.1
+schedule==1.2.0
+
+# Language detection
+langdetect==1.0.9
+polyglot==16.7.4
+
+# Compression and archiving
+gzip==1.0
+zipfile36==0.1.3
+
+# Environment and system
+psutil==5.9.6
+click==8.1.7
+
+# Blockchain and web3 (if needed for future features)
+# web3==6.11.3
+
+# Additional utilities
+tqdm==4.66.1
+colorama==0.4.6
+tabulate==0.9.0
